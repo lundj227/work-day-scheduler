@@ -16,30 +16,62 @@ $(function () {
   buttons.forEach(button => {
     button.addEventListener('click', function(event){
       event.preventDefault();
+
       if(this.parentElement.id == 'hour-9'){
-        
+        var parent = document.querySelector("#hour-9");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-9", textAreaEl.value);
+
       }else if(this.parentElement.id == 'hour-10'){
-        
+        var parent = document.querySelector("#hour-10");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-10", textAreaEl.value);
+
       }else if(this.parentElement.id == 'hour-11'){
+        var parent = document.querySelector("#hour-11");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-11", textAreaEl.value);
         
       }else if(this.parentElement.id == 'hour-12'){
+        var parent = document.querySelector("#hour-12");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-12", textAreaEl.value);
         
       }else if(this.parentElement.id == 'hour-13'){
+        var parent = document.querySelector("#hour-13");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-13", textAreaEl.value);
         
       }else if(this.parentElement.id == 'hour-14'){
+        var parent = document.querySelector("#hour-14");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-14", textAreaEl.value);
         
       }else if(this.parentElement.id == 'hour-15'){
+        var parent = document.querySelector("#hour-15");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-15", textAreaEl.value);
         
       }else if(this.parentElement.id == 'hour-16'){
+        var parent = document.querySelector("#hour-16");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-16", textAreaEl.value);
         
       }else if(this.parentElement.id == 'hour-17'){
-        
+        var parent = document.querySelector("#hour-17");
+        var textAreaEl = parent.children[1];
+
+        localStorage.setItem("hour-17", textAreaEl.value);
       }
   })
-  
-    var savedText = document.querySelector('.description').value;
-    var setDescription = localStorage.setItem('hour-9', savedText);
-    document.querySelector('.description').textContent = setDescription;
   })
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -59,3 +91,7 @@ $(function () {
     currentDay.textContent = nowTime;
   }, 1000);
 });
+
+var test = document.querySelector("#hour-9");
+var textAreaEl = test.children[1];
+// textAreaEl.value in the console to get whatever someone types into the text area

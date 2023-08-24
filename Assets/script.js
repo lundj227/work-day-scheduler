@@ -28,12 +28,20 @@ $(function () {
       localStorage.setItem(key, value);
     })
   })
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
+  /* Code to constantly check the hour in 24 hout format and update the class lists accordingly*/
+  setInterval(function(){
+    var currentHour = parseInt(dayjs().format('H'));
+    for (var i = 9; i <= 17; i++){
+      let currentHourDiv = document.querySelector(`#hour-${i}`);
+      if(currentHour == i){
+        currentHourDiv.classList.add('present');
+      }else if( currentHour < i){
+        currentHourDiv.classList.add('future');
+      }else if( currentHour > i){
+        currentHourDiv.classList.add('past');
+      }
+    }
+  }, 100);
 
   /*Code to display the current date in the header of the page.*/
   currentDay.textContent = dayjs().format('MMM D, YYYY hh:mm:ss a');

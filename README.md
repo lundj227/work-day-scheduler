@@ -4,4 +4,4 @@ A responsive Website that can help you stay organized. Text will remain even aft
 
 Github Repo: https://github.com/lundj227/work-day-scheduler
 
-![Alt text](./assets/images/ss.png)
+![Alt text](./images/ss.png)
